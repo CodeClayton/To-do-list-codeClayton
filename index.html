@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="assets/img/card-checklist.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+<body>
+    <h1>To Do List</h1>
+    <!-- To-do-list -->
+    <div>
+        <div class="Input-new-task">
+            <!-- Add new task -->
+            
+            <input type="text" id="new-task-text" placeholder="Digite sua task aqui">
+            <button onclick="NewTask()" id="Btn-new-task"><i class="bi bi-bookmark-plus-fill"></i></button>
+            <!-- End New Task -->
+        </div>
+
+        <div id="box-container"class="List-tasks">
+            <!-- List Tasks -->
+            <ul id="box-content-task">
+            </ul>
+            <!-- End To-do-list -->
+        </div>
+    </div>
+
+    <div class="alert-box hide">
+    <!-- Alert-box Js -->
+        <span id="icon"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-exclamation-circle-fill" viewBox="0 0 16 16">
+            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+          </svg></span>
+
+        <div class="text-alert">Essa tarefa já existe na lista.</div>
+        <button id="close-alert-box"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+            <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
+          </svg></button>
+          <!-- End Alert box -->
+    </div>
+
+    <div class="container-bar">
+        <!-- Bar effect -->
+        <div class="bar"></div>
+        <!-- End Bar effect -->
+    </div>
+        
+    <script src="script.js"></script>
+</body>
+</html>

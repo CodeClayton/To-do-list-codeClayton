@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+:root{
+    --Preto-Escuro: #222222;
+    --Preto-Claro: #333333;
+    --Laranja: #FF8C00;
+    --Laranja-Medio: #FF9C00;
+    --Laranja-Escuro: #FF7200;
+    --Laranja-Claro: #FFD180;
+    --Branco: #e9e9e9;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    margin-top: 80px;
+    background-color: var(--Preto-Escuro);
+    height: 100vh;
+    color: var(--Branco);
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+h1{
+    font-size: 3rem;
+    margin-top: 2rem;
+    
+}
+
+.Input-new-task{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3rem;
+    gap: 5px;
+}
+
+.Input-new-task i{
+    font-size: 1.6rem;
+}
+
+#new-task-text{
+    border: none;
+    background-color: var(--Preto-Claro);
+    height: 3rem;
+    width: 300px;
+    font-size: 1.3rem;
+    padding: 10px;
+    border-radius: 15px;
+    outline: none;
+    caret-color: var(--Branco);
+    color: var(--Branco);
+}
+
+#Btn-new-task{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--Laranja);
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+
+.List-tasks ul{
+    background-color: var(--Preto-Claro);
+    width: 360px;
+    border: 1px solid var(--Laranja-Escuro);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.List-tasks li{   
+    padding: 15px;  
+    list-style-type: none;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.List-tasks button{
+    min-width: 45px;
+    min-height: 45px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-task{
+    background-color: var(--Laranja-Medio);
+}
+
+.btn-Trash{
+    background-color: var(--Preto-Claro);
+}
+
+.btn-Trash:hover{
+    transform: scale(1.2);
+    color: #FF3333;
+}
+
+.btn-task:hover{
+    transform: scale(1.2);
+    background-color: var(--Laranja-Escuro);
+}
+
+#Btn-new-task:hover{
+    transform: scale(1.2);
+    background-color: var(--Laranja-Escuro);
+}
+
+.risco i{
+    font-size: 1.5rem;
+}
+
+@keyframes removeTask {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    50% {
+        transform: translateX(-30%);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+.removed-task{
+    /* animation: nome-da-animacao duração atraso; */
+    animation: removeTask 1.3s ease-in-out;
+}
+
+.alert-box{
+    width: 450px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--Laranja-Claro);
+    color: var(--Preto-Escuro);
+    position: fixed;
+    top: 0;
+    right: 0;
+    animation: show-alertbox 1s ease forwards;
+}
+
+#icon{
+    background-color: var(--Laranja-Medio);
+    padding: 9px;
+    align-items: center;
+}
+
+.text-alert{
+    display: flex;
+    font-size: 1.3rem;
+    align-items: center; 
+}
+
+#close-alert-box{
+    border: none;
+    background-color: var(--Laranja-Medio);
+    padding: 6px;
+    cursor: pointer;
+}
+
+.alert-box.hide{
+    display: none;
+    animation: slideIn 2.6s ease forwards;
+}
+
+@keyframes slideIn {
+    0% {
+      transform: translateX(100%);
+    }
+    10%,20%,30%,40%,50%{
+        transform: translateX(-3px);
+    }
+    15%,25%,35%,45%,55%{
+        transform: translateX(3px);
+    }
+    60%{
+        transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+}
+
+@keyframes slideOut {
+    0%{
+        transform: translateX(0%);
+    }
+
+    100%{
+        transform: translateX(100%);
+    }
+}
+
+.risco.show{
+   animation: text-shaving 1.3s ease;
+   color: #555555;
+   text-decoration: line-through;
+}
+
+.risco.remove-bar{
+    animation: text-shaving-regress 1.3s ease;
+    color: var(--Branco);
+    text-decoration: none;
+}
+
+@keyframes text-shaving{
+    0%{
+        color: var(--Branco);
+    }
+    100%{
+        text-decoration: line-through;
+        color: #555555;
+    }
+}
+
+@keyframes text-shaving-regress{
+    0%{
+        color: #555555;
+    }
+    100%{
+        color: var(--Branco);
+    }
+
+}
+
+@media screen and (max-width: 450px) {
+    #new-task-text{
+        height: 2.3rem;
+        width: 180px;
+        font-size: 1.2rem;
+    }
+    #Btn-new-task{
+        width: 45px;
+        height: 45px;
+    }
+    .alert-box{
+        width: 330px;
+        height: 60px;
+    }
+}
