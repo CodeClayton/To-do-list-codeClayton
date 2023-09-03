@@ -2,7 +2,7 @@
 
 Demonstração:
 
-![To-Do List Logo](assets/img/To-do-list%20Preview%2001.JPG)
+![To-Do List Logo](assets/img/To-do-list%20Preview%2001.png)
 
 ![To-Do List Demo](assets/img/To-do-list%20Preview%2002.JPG)
 
