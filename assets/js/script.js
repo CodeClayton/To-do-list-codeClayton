@@ -60,7 +60,7 @@ function NewTask() {
 
 document.addEventListener("keypress", function(e){
   if(e.key === "Enter"){
-    NewTask()
+    NewTask();
   }
 })
 

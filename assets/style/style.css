@@ -13,6 +13,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body{
@@ -30,7 +31,6 @@ body{
 h1{
     font-size: 3rem;
     margin-top: 2rem;
-    
 }
 
 .Input-new-task{
@@ -145,6 +145,7 @@ h1{
 .alert-box{
     width: 450px;
     height: 50px;
+    padding-right: 30px;
     display: flex;
     justify-content: space-between;
     background-color: var(--Laranja-Claro);
@@ -161,17 +162,14 @@ h1{
     align-items: center;
 }
 
+.bi-exclamation-circle-fill{
+    font-size: 1.5rem;
+}
+
 .text-alert{
     display: flex;
     font-size: 1.3rem;
     align-items: center; 
-}
-
-#close-alert-box{
-    border: none;
-    background-color: var(--Laranja-Medio);
-    padding: 6px;
-    cursor: pointer;
 }
 
 .alert-box.hide{
