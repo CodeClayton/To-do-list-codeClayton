@@ -8,7 +8,7 @@ Demonstração:
 
 ## Descrição do Projeto
 
-O projeto To-Do List é uma aplicação web simples e eficaz para gerenciar suas tarefas diárias.
+O projeto de To-Do List é uma aplicação web simples e eficaz para gerenciar suas tarefas diárias.
 
 ## Funcionalidades Principais
 
