@@ -12,6 +12,7 @@ O projeto de To-Do List é uma aplicação web simples e eficaz para gerenciar s
 
 ## Funcionalidades Principais
 
+
 - **Adicionar Tarefas:** Crie tarefas para não perder prazos importantes.
 
 - **Excluir:** Exclua aquelas que já foram concluídas ou não são mais relevantes.
