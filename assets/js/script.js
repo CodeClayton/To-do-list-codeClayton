@@ -12,6 +12,7 @@ function NewTask() {
 
   let boxcontent = document.getElementById("box-content-task");
   let tarefasExistentes = boxcontent.getElementsByTagName("li");
+  
   let captalizeText = function capitalizeFirstLetter(string) {
 
     return string.charAt(0).toUpperCase() + string.slice(1);
@@ -21,11 +22,11 @@ function NewTask() {
   //Captaliza o texto para que a primeira letra fique em caixa alta
   newtext = captalizeText(newtext);
 
-  if (newtext === "") {
+if (newtext === "") {
   textAlertbox.innerHTML = "A Task não pode ser vazia!";
   alertbox.style.display = 'flex';
+  RemoveTask(newtext);
   HideAlert();
-
 };
 
 //Verificar se o input esta vazio
