@@ -29,7 +29,7 @@ if (newtext === "") {
   HideAlert();
 };
 
-//Verificar se o input esta vazio
+//Verificar se há algo no input
 
 for (let j = 0; j < tarefasExistentes.length; j++) {
   let tarefaExistenteTexto = tarefasExistentes[j].textContent.trim();
@@ -44,7 +44,7 @@ for (let j = 0; j < tarefasExistentes.length; j++) {
   }
 };
 
-//Verificar se o input ja existe
+//Verificar duplicidade de input
 
 let liElement = document.createElement("li");
 liElement.id = `task-${taskId}`;
