@@ -1,6 +1,6 @@
 # README - Projeto To-Do List
 
-Demonstração:
+**Demonstração:**
 
 ![To-Do List Logo](assets/img/To-do-list%20Preview%2001.png)
 
